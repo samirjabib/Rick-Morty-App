@@ -15,7 +15,7 @@ function App() {
       axios.get(`https://rickandmortyapi.com/api/location/${getNumber}`)
           //usamos el then para recibir la promesa
           .then(res =>setLocationInfo(res.data))
-  },[getNumber])
+  },[])
   //Funcion para realizar la busqueda
   const [locationId,setLocationId] = useState("")
 

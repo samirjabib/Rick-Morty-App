@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+@import url(https://fonts.googleapis.com/css2?family=Pangolin&display=swap);
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+* {
+  font-family: sans-serif;
   color: white;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  padding: 15px;
+  margin: 0 auto;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.banner{
+  background-image: url('https://arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/QQWVSJ6MDVGKRELX455KIABEEY.gif');
+  height: 200px;
+  background-position: 45% 33%;
+}
+
+button {
+  color: #46b5d1;
+  background: transparent;
+  border: 0;
+  display: block;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: .95rem;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  outline: 0;
+}
+
+p {
+  margin: 0 0 8px 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Pangolin", sans-serif;
+  font-size: 3rem;
+}
+
+h3 {
+  font-family: "Pangolin", sans-serif;
+  font-size: 1.8rem;
+}
+
+input {
+  background: #443737;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  border: 0;
+  width: 100%;
+  height: 40px;
+  font-size: 1rem;
+  padding: 10px;
+  outline: 0;
+}
+.resident-card {
+  display: flex;
+  margin-bottom: 20px;
+  height:180px;
+  background-color: #443737;
+  border-radius: 5%;
+}
+
+.card img {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+
+.info {
+  padding: 8px 0 0 10px;
+}
+
+.description {
+  font-size: 0.8rem;
+  margin-bottom: 3.5px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 579px;
   }
-  to {
-    transform: rotate(360deg);
+  .col-sm-4 {
+    width: 33.333%;
   }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-4 {
+    width: 33.333%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 976px;
+  }
+}
+
+.circle span i{
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin-right: 5px;
+  border-radius: 50%;
+  font-size: 13px;
 }

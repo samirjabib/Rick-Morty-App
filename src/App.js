@@ -6,13 +6,12 @@ import ResidentList from './components/ResidentList';
 function App() {
   document.body.style = "background: #272121";
   //Funcion para generar un numero random del largo del arreglo
-  const getNumber = Math.floor(Math.random() * 20)
   //usamos un estado para setear la informacion de la API  
   const [locationInfo,setLocationInfo] = useState({})
   //usamos el useEffect para controlar los bucles infinitos, y tener el arreglo de dependencia 
   useEffect(() => {
               //usamos el metodo get para traer los datos de la API 
-      axios.get(`https://rickandmortyapi.com/api/location/${getNumber}`)
+      axios.get(`https://rickandmortyapi.com/api/location/0`)
           //usamos el then para recibir la promesa
           .then(res =>setLocationInfo(res.data))
   },[])
